@@ -1,0 +1,13 @@
+.nav{
+    grid-area: n;
+    padding: 20px;
+    background-color: rgb(247, 202, 148);
+}
+.item {
+    color: rgb(172, 31, 12);
+    text-decoration: none;
+}
+
+.active{
+    color: cornsilk;
+}
