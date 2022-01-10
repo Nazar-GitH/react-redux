@@ -1,13 +1,12 @@
 import React from 'react'
 import MyPosts from './MyPosts/MyPosts'
 import classes from './Profile.module.css'
+import ProfileInfo from './ProfileInfo/ProfileInfo'
 
 const Profile = (props) => {
     return (
-        <div>
-            <div>
-            <img src = "https://cdnb.artstation.com/p/assets/images/images/007/687/069/large/fady-habib-01-view-1-design.jpg?1507844944" alt = 'page'></img>
-    </div>
+        <div> 
+       <ProfileInfo />
     <MyPosts />
     </div>
     
