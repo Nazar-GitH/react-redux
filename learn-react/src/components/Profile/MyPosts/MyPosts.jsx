@@ -1,33 +1,33 @@
-import React from 'react'
+import React from 'react';
 import classes from './MyPosts.module.css';
 import Post from './Post/Post';
 
-let postData = [
-    {id: 1, message:'It is pepsi-cola-lime', likesCount: '13'},
-    {id: 2, message: 'It is pepsi-cola-mango', likesCount: '24'}
+const MyPosts = (props) => {
+
+  let posts = [
+    {id: 1, message: "Lime", likesCount: 24},
+    {id: 2, message: "Cherry", likesCount: 16},
+    {id: 3, message: "Mango", likesCount: 42}
 ]
 
-let postsElement = postData.map(p => <Post message = {p.message} likesCount = {p.likesCount}/>
-    )
+let postsElements = posts.map(p => <Post taste={p.message} likesCount={p.likesCount} /> )
 
-const MyPosts = (props) => {
-    return(
-<div className={classes.postsBlock}>
-        <h3>My posts</h3>
+  return (
+    <div className={classes.postsBlock}>
+      <h3>My post</h3>
+      <div>
         <div>
-            <div>
-            <textarea></textarea>
-            </div>
-            <div>
-            <button>Add post</button>
-            </div>
+        <textarea></textarea>
+      <div>
+      </div>
+        <button>Add post</button>
         </div>
-    <div className={classes.posts}>
-    {postsElement}
+      </div>
+      <div className={classes.post}>
+        {postsElements}
+      </div>
     </div>
-    </div>
-    )
+  )
 }
 
 export default MyPosts
-    
