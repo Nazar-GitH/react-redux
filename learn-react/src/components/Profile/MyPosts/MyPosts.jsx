@@ -10,9 +10,9 @@ let postsElements = props.posts.map(p => <Post taste={p.message} likesCount={p.l
 let newPostElement = React.useRef();
 
 let addPost = () => {
-  debugger;
   let text = newPostElement.current.value;
   props.addPost(text) 
+  newPostElement.current.value = ''
 }
 
   return (
